@@ -24,7 +24,7 @@
 
 #include <stdint.h>
 
-#include "config.h"
+//#include "config.h"
 #include "libavcodec/avcodec.h"
 #include "libavfilter/avfilter.h"
 #include "libavformat/avformat.h"
@@ -33,6 +33,8 @@
 #ifdef _WIN32
 #undef main /* We don't want SDL to override our main() */
 #endif
+
+#define AV_LOG_STDERR    -16
 
 /**
  * program name, defined by the program for show_version().
@@ -99,7 +101,7 @@ int opt_default(void *optctx, const char *opt, const char *arg);
  */
 int opt_loglevel(void *optctx, const char *opt, const char *arg);
 
-int opt_report(const char *opt);
+int opt_report(void *optctx, const char *opt, const char *arg);
 
 int opt_max_alloc(void *optctx, const char *opt, const char *arg);
 
@@ -236,7 +238,7 @@ void show_help_options(const OptionDef *options, const char *msg, int req_flags,
     { "colors",      OPT_EXIT,             { .func_arg = show_colors },      "show available color names" },            \
     { "loglevel",    HAS_ARG,              { .func_arg = opt_loglevel },     "set logging level", "loglevel" },         \
     { "v",           HAS_ARG,              { .func_arg = opt_loglevel },     "set logging level", "loglevel" },         \
-    { "report",      0,                    { (void*)opt_report },            "generate a report" },                     \
+    { "report",      0,                    { .func_arg = opt_report },       "generate a report" },                     \
     { "max_alloc",   HAS_ARG,              { .func_arg = opt_max_alloc },    "set maximum size of a single allocated block", "bytes" }, \
     { "cpuflags",    HAS_ARG | OPT_EXPERT, { .func_arg = opt_cpuflags },     "force specific cpu flags", "flags" },     \
     { "hide_banner", OPT_BOOL | OPT_EXPERT, {&hide_banner},     "do not show program banner", "hide_banner" },          \

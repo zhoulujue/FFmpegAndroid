@@ -1,5 +1,7 @@
-./obj/local/arm64-v8a/objs/ffmpegjni/ffmpeg_filter.o: ffmpeg_filter.c \
-  ffmpeg.h config.h cmdutils.h \
+/Users/lujuezhou/Developer/CodeOnGithub/MyFFmpegAndroid/ffmpeg/obj/local/arm64-v8a/objs/ffmpegjni/ffmpeg_filter.o: \
+  /Users/lujuezhou/Developer/CodeOnGithub/MyFFmpegAndroid/ffmpeg/ffmpeg_filter.c \
+  /Users/lujuezhou/Developer/CodeOnGithub/MyFFmpegAndroid/ffmpeg/ffmpeg.h \
+  /Users/lujuezhou/Developer/CodeOnGithub/MyFFmpegAndroid/ffmpeg/cmdutils.h \
   /Users/lujuezhou/ffmpegbuilddir/ffmpeg-install-dir/android-arm/include/libavcodec/avcodec.h \
   /Users/lujuezhou/ffmpegbuilddir/ffmpeg-install-dir/android-arm/include/libavutil/samplefmt.h \
   /Users/lujuezhou/ffmpegbuilddir/ffmpeg-install-dir/android-arm/include/libavutil/avutil.h \
@@ -52,11 +54,9 @@
   /Users/lujuezhou/ffmpegbuilddir/ffmpeg-install-dir/android-arm/include/libavutil/pixdesc.h \
   /Users/lujuezhou/ffmpegbuilddir/ffmpeg-install-dir/android-arm/include/libavutil/imgutils.h
 
-ffmpeg.h:
+/Users/lujuezhou/Developer/CodeOnGithub/MyFFmpegAndroid/ffmpeg/ffmpeg.h:
 
-config.h:
-
-cmdutils.h:
+/Users/lujuezhou/Developer/CodeOnGithub/MyFFmpegAndroid/ffmpeg/cmdutils.h:
 
 /Users/lujuezhou/ffmpegbuilddir/ffmpeg-install-dir/android-arm/include/libavcodec/avcodec.h:
 

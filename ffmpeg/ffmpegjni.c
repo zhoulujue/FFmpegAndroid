@@ -30,6 +30,8 @@ int register_ffmpeg_helper(JNIEnv *env)
 /////////////////////////////////// log 方法 ///////////////////////////////////
 static const char *avutil_log_get_level_str(int level) {
     switch (level) {
+    case AV_LOG_STDERR:
+        return "stderr";
     case AV_LOG_QUIET:
         return "quiet";
     case AV_LOG_DEBUG:
@@ -90,6 +92,47 @@ static void avutil_log_sanitize(uint8_t *line) {
         line++;
     }
 }
+
+#define LINE_SZ 1024
+void log_anyway(void *ptr, int level, const char *fmt, va_list vl)
+{
+    static int print_prefix = 1;
+    static char line[LINE_SZ];
+    unsigned tint = 0;
+
+    if (level >= 0) {
+        tint = level & 0xff00;
+        level &= 0xff;
+    }
+
+    memset(line, '\0', LINE_SZ);
+    av_log_format_line(ptr, level, fmt, vl, line, LINE_SZ, &print_prefix);
+
+    switch (level) {
+        case AV_LOG_QUIET:
+            break;
+        case AV_LOG_PANIC:
+        case AV_LOG_FATAL:
+            loge("%s", line);
+            break;
+        case AV_LOG_ERROR:
+            loge("%s", line);
+            break;
+        case AV_LOG_WARNING:
+            logw("%s", line);
+            break;
+        case AV_LOG_INFO:
+            logi("%s", line);
+            break;
+        case AV_LOG_VERBOSE:
+            logv("%s", line);
+            break;
+        case AV_LOG_DEBUG:
+        case AV_LOG_TRACE:
+            logd("%s", line);
+            break;
+    }
+}
 //////////////////////////////////////////////////////////////////////
 
 jint JNI_OnLoad(JavaVM* vm, void* reserved)
@@ -141,6 +184,7 @@ void log_callback_function(void *ptr, int level, const char* format, va_list var
     if ((activeLogLevel == AV_LOG_QUIET) || (level > activeLogLevel)) {
         return;
     }
+    log_anyway(ptr, level, format, vargs);
 
     av_bprint_init(&fullLine, 0, AV_BPRINT_SIZE_UNLIMITED);
 
@@ -168,6 +212,7 @@ void log_callback_function(void *ptr, int level, const char* format, va_list var
 // 响应 Java 层的入口方法
 JNIEXPORT jint Java_com_example_myffmpegandroid_FFmpegHelper_executeCmd(JNIEnv *env, jobject thiz, jobjectArray strArray)
 {
+    loge("%s", "native executeCmd called!\n");
     // avutil 提供的设置log的方法
     av_log_set_callback(log_callback_function);
 

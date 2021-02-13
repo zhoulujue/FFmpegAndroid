@@ -1,6 +1,6 @@
-/Users/lujuezhou/AndroidStudioProjects/MyFFmpegAndroid/ffmpeg/obj/local/arm64-v8a/objs/ffmpegjni/ffmpeg.o: \
-  /Users/lujuezhou/AndroidStudioProjects/MyFFmpegAndroid/ffmpeg/ffmpeg.c \
-  /Users/lujuezhou/AndroidStudioProjects/MyFFmpegAndroid/ffmpeg/config.h \
+/Users/lujuezhou/Developer/CodeOnGithub/MyFFmpegAndroid/ffmpeg/obj/local/arm64-v8a/objs/ffmpegjni/ffmpeg.o: \
+  /Users/lujuezhou/Developer/CodeOnGithub/MyFFmpegAndroid/ffmpeg/ffmpeg.c \
+  /Users/lujuezhou/Developer/CodeOnGithub/MyFFmpegAndroid/ffmpeg/ffmpegjni.h \
   /Users/lujuezhou/ffmpegbuilddir/ffmpeg-install-dir/android-arm/include/libavformat/avformat.h \
   /Users/lujuezhou/ffmpegbuilddir/ffmpeg-install-dir/android-arm/include/libavcodec/avcodec.h \
   /Users/lujuezhou/ffmpegbuilddir/ffmpeg-install-dir/android-arm/include/libavutil/samplefmt.h \
@@ -42,7 +42,7 @@
   /Users/lujuezhou/ffmpegbuilddir/ffmpeg-install-dir/android-arm/include/libavutil/internal.h \
   /Users/lujuezhou/ffmpegbuilddir/ffmpeg-install-dir/android-arm/include/config.h \
   /Users/lujuezhou/ffmpegbuilddir/ffmpeg-install-dir/android-arm/include/libavutil/timer.h \
-  /Users/lujuezhou/ffmpegbuilddir/ffmpeg-install-dir/android-arm/include/libavutil/arm/timer.h \
+  /Users/lujuezhou/ffmpegbuilddir/ffmpeg-install-dir/android-arm/include/libavutil/aarch64/timer.h \
   /Users/lujuezhou/ffmpegbuilddir/ffmpeg-install-dir/android-arm/include/libavutil/libm.h \
   /Users/lujuezhou/ffmpegbuilddir/ffmpeg-install-dir/android-arm/include/libavutil/intreadwrite.h \
   /Users/lujuezhou/ffmpegbuilddir/ffmpeg-install-dir/android-arm/include/libavutil/bswap.h \
@@ -57,20 +57,19 @@
   /Users/lujuezhou/ffmpegbuilddir/ffmpeg-install-dir/android-arm/include/libavutil/threadmessage.h \
   /Users/lujuezhou/ffmpegbuilddir/ffmpeg-install-dir/android-arm/include/libavcodec/mathops.h \
   /Users/lujuezhou/ffmpegbuilddir/ffmpeg-install-dir/android-arm/include/libavutil/reverse.h \
-  /Users/lujuezhou/ffmpegbuilddir/ffmpeg-install-dir/android-arm/include/libavcodec/arm/mathops.h \
   /Users/lujuezhou/ffmpegbuilddir/ffmpeg-install-dir/android-arm/include/libavformat/os_support.h \
   /Users/lujuezhou/ffmpegbuilddir/ffmpeg-install-dir/android-arm/include/libavfilter/avfilter.h \
   /Users/lujuezhou/ffmpegbuilddir/ffmpeg-install-dir/android-arm/include/libavfilter/version.h \
   /Users/lujuezhou/ffmpegbuilddir/ffmpeg-install-dir/android-arm/include/libavfilter/buffersrc.h \
   /Users/lujuezhou/ffmpegbuilddir/ffmpeg-install-dir/android-arm/include/libavfilter/buffersink.h \
-  /Users/lujuezhou/AndroidStudioProjects/MyFFmpegAndroid/ffmpeg/ffmpeg.h \
-  /Users/lujuezhou/AndroidStudioProjects/MyFFmpegAndroid/ffmpeg/cmdutils.h \
+  /Users/lujuezhou/Developer/CodeOnGithub/MyFFmpegAndroid/ffmpeg/ffmpeg.h \
+  /Users/lujuezhou/Developer/CodeOnGithub/MyFFmpegAndroid/ffmpeg/cmdutils.h \
   /Users/lujuezhou/ffmpegbuilddir/ffmpeg-install-dir/android-arm/include/libswscale/swscale.h \
   /Users/lujuezhou/ffmpegbuilddir/ffmpeg-install-dir/android-arm/include/libswscale/version.h \
   /Users/lujuezhou/ffmpegbuilddir/ffmpeg-install-dir/android-arm/include/libavutil/eval.h \
   /Users/lujuezhou/ffmpegbuilddir/ffmpeg-install-dir/android-arm/include/libavutil/avassert.h
 
-/Users/lujuezhou/AndroidStudioProjects/MyFFmpegAndroid/ffmpeg/config.h:
+/Users/lujuezhou/Developer/CodeOnGithub/MyFFmpegAndroid/ffmpeg/ffmpegjni.h:
 
 /Users/lujuezhou/ffmpegbuilddir/ffmpeg-install-dir/android-arm/include/libavformat/avformat.h:
 
@@ -154,7 +153,7 @@
 
 /Users/lujuezhou/ffmpegbuilddir/ffmpeg-install-dir/android-arm/include/libavutil/timer.h:
 
-/Users/lujuezhou/ffmpegbuilddir/ffmpeg-install-dir/android-arm/include/libavutil/arm/timer.h:
+/Users/lujuezhou/ffmpegbuilddir/ffmpeg-install-dir/android-arm/include/libavutil/aarch64/timer.h:
 
 /Users/lujuezhou/ffmpegbuilddir/ffmpeg-install-dir/android-arm/include/libavutil/libm.h:
 
@@ -184,8 +183,6 @@
 
 /Users/lujuezhou/ffmpegbuilddir/ffmpeg-install-dir/android-arm/include/libavutil/reverse.h:
 
-/Users/lujuezhou/ffmpegbuilddir/ffmpeg-install-dir/android-arm/include/libavcodec/arm/mathops.h:
-
 /Users/lujuezhou/ffmpegbuilddir/ffmpeg-install-dir/android-arm/include/libavformat/os_support.h:
 
 /Users/lujuezhou/ffmpegbuilddir/ffmpeg-install-dir/android-arm/include/libavfilter/avfilter.h:
@@ -196,9 +193,9 @@
 
 /Users/lujuezhou/ffmpegbuilddir/ffmpeg-install-dir/android-arm/include/libavfilter/buffersink.h:
 
-/Users/lujuezhou/AndroidStudioProjects/MyFFmpegAndroid/ffmpeg/ffmpeg.h:
+/Users/lujuezhou/Developer/CodeOnGithub/MyFFmpegAndroid/ffmpeg/ffmpeg.h:
 
-/Users/lujuezhou/AndroidStudioProjects/MyFFmpegAndroid/ffmpeg/cmdutils.h:
+/Users/lujuezhou/Developer/CodeOnGithub/MyFFmpegAndroid/ffmpeg/cmdutils.h:
 
 /Users/lujuezhou/ffmpegbuilddir/ffmpeg-install-dir/android-arm/include/libswscale/swscale.h:
 

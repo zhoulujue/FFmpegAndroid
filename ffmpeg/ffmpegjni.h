@@ -8,6 +8,9 @@
 
 #define LOG_TAG "ffmpegjni"
 
+/** Defines tag used for Android logging. */
+#define LIB_NAME "mobile-ffmpeg"
+
 /** Verbose Android logging macro. */
 #define logv(...) __android_log_print(ANDROID_LOG_VERBOSE, LOG_TAG, __VA_ARGS__)
 

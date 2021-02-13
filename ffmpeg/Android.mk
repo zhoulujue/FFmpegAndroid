@@ -62,8 +62,9 @@ LOCAL_SRC_FILES := ffmpegjni.c \
 LOCAL_C_INCLUDES := /Users/lujuezhou/ffmpegbuilddir/ffmpeg-install-dir/android-arm/include
 LOCAL_CFLAGS := -Wall -Werror -Wno-unused-parameter -Wno-switch -Wno-sign-compare \
 				-Wno-implicit-function-declaration -Wno-incompatible-pointer-types-discards-qualifiers \
-				-Wno-parentheses -Wno-sign-compare -Wno-implicit-const-int-float-conversion \
+				-Wno-parentheses -Wno-sign-compare \
 				-Wno-missing-field-initializers -Wno-asm-operand-widths -Wno-int-conversion
+				#-Wno-implicit-const-int-float-conversion \
 
 LOCAL_LDLIBS := -llog -lz -landroid
 LOCAL_SHARED_LIBRARIES := libavfilter libavformat libavcodec libavutil libswresample libavdevice libswscale
